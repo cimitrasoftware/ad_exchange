@@ -1,6 +1,14 @@
 # ad_exchange
 40 Common Actions For Active Directory and Exchange User Accounts
 
+This script has a "buffet" of features you can take on Active Directory and Exchange User accounts. For example, you can create a user in Active Directory or Exchange, and set several of their attributes at the time of the user creation. 
+
+Or you can modify only one or some attributes of an existing Active Directory or Exchange User account. 
+
+Here is how you could create a user in Active Directory, and add several attributes to that user. 
+
+.\cimitra_ad_exchange.ps1 -AddToActiveDirectory -FirstName "Bob" -LastName "Jones" -ContextIn "OU=ADMINISTRATION,OU=DEMOUSERS,DC=cimitrademo,DC=com" -SamAccountName "bjones" -Title "Controller" -DefaultPassword "abc_4242" -ManagerFirstName "Steve" -ManagerLastName "McQueen" -ManagerContext "OU=ADMINISTRATION,OU=DEMOUSERS,DC=cimitrademo,DC=com" -Description "Accounting Department Employee" -OfficePhone "801-111-2222" -MobilePhone "801-333-3333" -ExpirationDate "02/20/2035"
+
 Tested and developed on a Windows 2016 and Windows 2019 Server
 Initially released on April 27th, 2021
 
