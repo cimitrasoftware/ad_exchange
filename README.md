@@ -49,9 +49,9 @@ Initially released on April 27th, 2021
 35. List all Users in an Active Directory tree context who have not logged in
 36. List all Users in an Active Directory tree who are locked out
 37. Remove an Active Directory User from an Active Directory Group by Group GUID
-38. Remove an Active Directory User from a comma separted list of Active Directory Groups by Group GUID
-39. Add an Active Directory User to a comma separated list of Active Directory Groups by Group GUID
-40. Remove an Active Directory user. 
+38. Remove an Active Directory User from a comma-separted list of Active Directory Groups by Group GUID
+39. Add an Active Directory User to a comma-separated list of Active Directory Groups by Group GUID
+40. Remove an Active Directory user
 
 ADDITIONAL FUNCTIONALITY
 
