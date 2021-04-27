@@ -65,9 +65,17 @@ Users defined in a group designated as the "Exclude Group" cannot be modified by
 
 AD_EXCLUDE_GROUP=35eddbe6-234f-4f94-af4c-efb0198e4247
 
+DEPENDENCIES
+
 The cimitra_ad_exchange.ps1 script has a dependency upon two other scripts: 
 
 config_reader.ps1
 SearchForUser.ps1
 
 These scripts should be located in the same directory as the cimitra_ad_exchange.ps1 script. 
+
+EXCHANGE ACCOUNT CREATION AND CHANGES
+
+In order to create an Exchange Session this script requires several different inputs. For example, an encrypted password file is required. Or the Exchange domain URI. Here are examples for the required switches in order to create a user in Exchange: 
+
+-AddToExchange -ExchangeSecurePasswordFileIn "C:\Cimitra\Scripts\CimAgentPwd.txt"  -ExchangeConnectionURIIn "http://ACME-EXCH16.acme.internal/PowerShell/" -ExchangeDomainNameIn "acme.biz" -CimitraAgentLogonAccountIn "CimitraAgent@acme.biz" -FirstName "John" -LastName "Doe" -ContextIn "OU=ADMINISTRATION,OU=DEMOUSERS,DC=cimitrademo,DC=com"
