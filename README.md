@@ -1,7 +1,7 @@
 # ad_exchange
 38 Common Actions For Active Directory and Exchange User Accounts
 
-This script has a "buffet" of features you can take on Active Directory and Exchange User accounts. For example, you can create a user in Active Directory or Exchange, and set several of their attributes at the time of the user creation. 
+This script allows for dozens of modifications you can make to Active Directory and Exchange User accounts. For example, you can create a user in Active Directory or Exchange, and set several of their attributes at the time of the user creation event. 
 
 Or you can modify only one or some attributes of an existing Active Directory or Exchange User account. 
 
@@ -10,7 +10,9 @@ Here is how you could create a user in Active Directory, and add several attribu
 .\cimitra_ad_exchange.ps1 -AddToActiveDirectory -FirstName "Bob" -LastName "Jones" -ContextIn "OU=ADMINISTRATION,OU=DEMOUSERS,DC=cimitrademo,DC=com" -SamAccountName "bjones" -Title "Controller" -DefaultPassword "abc_4242" -ManagerFirstName "Steve" -ManagerLastName "McQueen" -ManagerContext "OU=ADMINISTRATION,OU=DEMOUSERS,DC=cimitrademo,DC=com" -Description "Accounting Department Employee" -OfficePhone "801-111-2222" -MobilePhone "801-333-3333" -ExpirationDate "02/20/2035"
 
 Tested and developed on a Windows 2016 and Windows 2019 Server
-Initially released on April 27th, 2021
+Initially released on April 28th, 2021
+
+Here are the actions you can take with this script. 
 
 1. Add User to Active Directory
 2. Add User to Exchange
@@ -25,9 +27,9 @@ Initially released on April 27th, 2021
 11. Modify Active Directory User's Description
 12. Modify Active Directory User's Manager
 13. Modify Active Directory User's Department
-14. Add an Active Directory User to Active Directory Group by the Group GUID
+14. Add an Active Directory User to an Active Directory Group by the Group GUID
 15. Add an expiration date to an Active Directory User account
-16. Remove an expiration date from an Active Directory User account
+16. Remove the expiration date from an Active Directory User account
 17. Enable an Active Directory User account
 18. Disable an Active Directory User account
 19. Unlock an Active Directory User account
@@ -85,3 +87,8 @@ EXCHANGE ACCOUNT CREATION AND CHANGES
 In order to create an Exchange Session this script requires several different inputs. For example, an encrypted password file is required. Or the Exchange domain URI. Here are examples for the required switches in order to create a user in Exchange: 
 
 -AddToExchange -ExchangeSecurePasswordFileIn "C:\Cimitra\Scripts\CimAgentPwd.txt"  -ExchangeConnectionURIIn "http://ACME-EXCH16.acme.internal/PowerShell/" -ExchangeDomainNameIn "acme.biz" -CimitraAgentLogonAccountIn "CimitraAgent@acme.biz" -FirstName "John" -LastName "Doe" -ContextIn "OU=ADMINISTRATION,OU=DEMOUSERS,DC=cimitrademo,DC=com"
+
+In order to encrypt the password file needed for the -ExchangeSecurePasswordFileIn switch, see this article by Adam Bertram:
+https://4sysops.com/archives/encrypt-a-password-with-powershell/
+
+The ExchangePowerShell module from Microsoft must be installed in order to add and change Exchange User accounts. 
