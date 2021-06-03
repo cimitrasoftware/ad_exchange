@@ -1,5 +1,5 @@
 # ad_exchange
-38 Common Actions For Active Directory and Exchange User Accounts
+40 Common Actions For Active Directory and Exchange User Accounts
 
 This script allows for dozens of modifications you can make to Active Directory and Exchange User accounts. For example, you can create a user in Active Directory or Exchange, and set several of their attributes at the time of the user creation event. 
 
@@ -52,6 +52,8 @@ Here are the actions you can take with this script.
 36. Remove an Active Directory User from a comma-separted list of Active Directory Groups by Group GUID
 37. Add an Active Directory User to a comma-separated list of Active Directory Groups by Group GUID
 38. Remove an Active Directory user
+39. Search for a user object, choosing attributes of the user, for example, their phone number with the full phone number specified:   801-555-1212
+40. Wildcard Search for a user object, choosing partial attributes of the user, for example, search for their their phone number with: 801-555
 
 ADDITIONAL FUNCTIONALITY
 
