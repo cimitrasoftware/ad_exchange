@@ -1,7 +1,7 @@
 # ad_exchange
 40 Common Actions For Active Directory and Exchange User Accounts
 
-*[INSTALL]*
+**[INSTALL]**
 
 In a Powershell 5, or 7 Terminal Session (PowerShell 7 is a lot better choice)
 
@@ -16,6 +16,8 @@ cd c:\cimitra\scripts\ad
 Run: ./cimitra_active_directory_and_exchange.ps1
 
 Edit the settings.cfg file to specify the Exclude Group. See more about the Exclude Group below. 
+
+**[SCRIPT PURPOSE]**
 
 This script allows for dozens of modifications you can make to Active Directory and Exchange User accounts. For example, you can create a user in Active Directory or Exchange, and set several of their attributes at the time of the user creation event. 
 
@@ -71,27 +73,27 @@ Here are the actions you can take with this script.
 39. Search for a user object, choosing attributes of the user, for example, their phone number with the full phone number specified:   801-555-1212
 40. Wildcard Search for a user object, choosing partial attributes of the user, for example, search for their their phone number with: 801-555
 
-ADDITIONAL FUNCTIONALITY
+**ADDITIONAL FUNCTIONALITY**
 
-[ USER SEARCH ]
+**[USER SEARCH]**
 
 When you specify a user by their First and Last name, but don't specify the user's context, this script will search for users with the First and Last names specified. If only one user is found with that First and Last name, then that user is modified. 
 
 If there are two users with the same First and Last name, then the script will list both users and will not proceed. 
 
-[DEFAULT CONTEXT]
+**[DEFAULT CONTEXT]**
 
 The "Default Context" can be specified in a configuration file called "settings.cfg". The Default Context setting in the settings.cfg file looks like this: 
 
 AD_USER_CONTEXT=OU=DEMOUSERS,OU=DEMO,DC=cimitrademo,DC=com
 
-[EXCLUDE GROUP]
+**[EXCLUDE GROUP]**
 
 Users defined in a group designated as the "Exclude Group" cannot be modified by this script. The "Exclude Group" can be specified in a configuration file called "settings.cfg". The Exclude Group setting in the settings.cfg file looks like this: 
 
 AD_EXCLUDE_GROUP=35eddbe6-234f-4f94-af4c-efb0198e4247
 
-DEPENDENCIES
+**DEPENDENCIES**
 
 The cimitra_active_directory_and_exchange.ps1 script has a dependency upon two other scripts: 
 
@@ -100,7 +102,7 @@ SearchForUser.ps1
 
 These scripts should be located in the same directory as the cimitra_ad_exchange.ps1 script. 
 
-EXCHANGE ACCOUNT CREATION AND CHANGES
+**EXCHANGE ACCOUNT CREATION AND CHANGES**
 
 In order to create an Exchange Session this script requires several different inputs. For example, an encrypted password file is required. Or the Exchange domain URI. Here are examples for the required switches in order to create a user in Exchange: 
 
