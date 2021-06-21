@@ -1,6 +1,22 @@
 # ad_exchange
 40 Common Actions For Active Directory and Exchange User Accounts
 
+*[INSTALL]*
+
+In a Powershell 5, or 7 Terminal Session (PowerShell 7 is a lot better choice)
+
+Install the Cimitra's Active Directory and Exchange Script with the command below
+
+iwr https://raw.githubusercontent.com/cimitrasoftware/ad_exchange/main/install.ps1 | iex
+
+Go to the directory c:\cimitra\scripts\ad
+
+cd c:\cimitra\scripts\ad
+
+Run: ./cimitra_active_directory_and_exchange.ps1
+
+Edit the settings.cfg file to specify the Exclude Group. See more about the Exclude Group below. 
+
 This script allows for dozens of modifications you can make to Active Directory and Exchange User accounts. For example, you can create a user in Active Directory or Exchange, and set several of their attributes at the time of the user creation event. 
 
 Or you can modify only one or some attributes of an existing Active Directory or Exchange User account. 
