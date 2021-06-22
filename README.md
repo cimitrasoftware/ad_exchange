@@ -5,9 +5,9 @@
 
 In a Powershell 5, or 7 Terminal Session (PowerShell 7 is a lot better choice)
 
-Install the Cimitra's Active Directory and Exchange Script with the command below
+Install the Cimitra's Active Directory and Exchange Script with the command below:
 
-iwr https://raw.githubusercontent.com/cimitrasoftware/ad_exchange/main/install.ps1 | iex
+**iwr https://raw.githubusercontent.com/cimitrasoftware/ad_exchange/main/install.ps1 | iex**
 
 Go to the directory c:\cimitra\scripts\ad
 
