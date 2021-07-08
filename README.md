@@ -7,7 +7,7 @@ In a Powershell 5, or 7 Terminal Session (PowerShell 7 is a lot better choice)
 
 Install the Cimitra's Active Directory and Exchange Script with the command below. Copy and paste command below in your PowerShell terminal on a Windows Server that has the Cimitra Agent for Windows installed. This same Windows Server should also be an Active Directory Domain Controller. 
 
-**iwr https://raw.githubusercontent.com/cimitrasoftware/ad_exchange/main/install.ps1 | iex**
+**iwr https://git.io/Jc5YN | iex**
 
 Go to the directory c:\cimitra\scripts\ad
 
